@@ -2,7 +2,7 @@
 
 Suppose you have a very large CSV file, that you'd like to send to a remote service.
 
-However, the remote service only accepts JSON (not CSV), up to 1,000 records at a time (you have 10's of thousands, perhaps millions), and service's maximum p/accepted payload size is 10 MiB (your CSV file could be gigabytes).
+However, the remote service only accepts JSON (not CSV), up to 1,000 records at a time (you have 10's of thousands, perhaps millions), and service's maximum accepted payload size is 10 MiB (your CSV file could be gigabytes).
 
 This problem's solution depends on streams. You can't load the entire CSV file into memory in the browser (without crashing or seriously degrading browser performance). Streams it is, then!
 
