@@ -34,6 +34,9 @@ class MassCreateQueue {
     const payload = `{"records":[${this.data.join(',')}]}`;
     await fetch(url, {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: payload
     });
     const msg = `<div>Sent ${this.data.length} records</div>`;

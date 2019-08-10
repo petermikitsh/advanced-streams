@@ -22,6 +22,13 @@ npm install
 npm start
 ```
 
+# Production Mode
+
+```
+npm run build
+npm run serve
+```
+
 Your browser will automatically open at http://0.0.0.0:8080/.
 
 # How it Works
@@ -42,4 +49,4 @@ The responsibility of batching the data to the service (per the criteria outline
 
 ![performance.png](performance.png)
 
-Uploading 1 million records occurs from ~4 to 17 seconds. Garbage collection periodically occurs, suggesting there are no memory leaks.
+Uploading 1 million records occurs from ~5 to 15 seconds (production build). Garbage collection periodically occurs, suggesting there are no memory leaks.
