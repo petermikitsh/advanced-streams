@@ -32,7 +32,7 @@ There's a few notable stream implementations out there, including:
 - Node Streams (V2)
 - Node Streams (V1, V3)
 
-Module `filereader-stream` does the heavy lifting of converting the File object (a WHATWG stream) into a Node V2 compatible stream. (Most open source streaming implementations are built to work with Node V2 streams).
+Module `filestream` does the heavy lifting of converting the File object (a WHATWG stream) into a Node V2 compatible stream. (Most open source streaming implementations are built to work with Node V2 streams).
 
 After converting to a Node V2 Stream, the stream is piped through the `csvtojson` transformer.
 
