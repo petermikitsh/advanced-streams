@@ -3,7 +3,7 @@ import 'core-js/fn/promise';
 import 'whatwg-fetch';
 
 import csvtojson from 'csvtojson';
-import fileReaderStream from 'filereader-stream';
+import FileReadStream from 'filestream/read';
 
 class MassCreateQueue {
   constructor() {
@@ -63,7 +63,7 @@ const onChange = async () => {
    * Fortunately, filereader-stream converts WHATWG
    * streams to Node V2 streams :)
    */
-  const nodeStream = fileReaderStream(file);
+  const nodeStream = new FileReadStream(file);
   const csvtojsonOpts = {
     flatKeys: true,
     colParser: {

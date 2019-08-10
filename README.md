@@ -37,3 +37,9 @@ Module `filereader-stream` does the heavy lifting of converting the File object 
 After converting to a Node V2 Stream, the stream is piped through the `csvtojson` transformer.
 
 The responsibility of batching the data to the service (per the criteria outlined in the README's introduction) is the responsibility of the `MassCreateQueue` class (see [client.js](client.js)). 
+
+# Perf Metrics
+
+![performance.png](performance.png)
+
+Uploading 1 million records occurs from ~4 to 17 seconds. Garbage collection periodically occurs, suggesting there are no memory leaks.
